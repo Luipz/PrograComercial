@@ -16,5 +16,8 @@ class Publicacion(models.Model):
         self.fecha_publicacion = timezone.now()
         self.save()
 
-    #def _str_(self):
-    #    return self.titulo 
+    def _str_(self):
+        return self.titulo 
+
+    class Meta:
+        verbose_name_plural = 'Publicaciones'
