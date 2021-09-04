@@ -5,8 +5,8 @@ from.models import Publicacion
 # Create your views here.
 def publicacion_lista(request):
     publicaciones = Publicacion.objects.filter(fecha_publicacion__lte=timezone.now()).order_by('fecha_publicacion')
-    #return render(request, 'blog/publicacion_lista.html', {'publicaciones': publicaciones})
-    return render(request, 'blog/publicacion_listab.html', {'publicaciones': publicaciones})
+    return render(request, 'blog/publicacion_lista.html', {'publicaciones': publicaciones})
+    #return render(request, 'blog/publicacion_listab.html', {'publicaciones': publicaciones})
 
 def publicacion_detalle (request, pk):
     publicacion = get_object_or_404(Publicacion, pk=pk)
