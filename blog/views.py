@@ -1,8 +1,8 @@
-from django.shortcuts import get_object_or_404, render, redirect
+from django.shortcuts import redirect, get_object_or_404, render
 from django.utils import timezone
 
-from.models import Publicacion
-from.forms import PublicacionForm
+from .models import Publicacion
+from .forms import PublicacionForm
 # Create your views here.
 def publicacion_lista(request):
     publicaciones = Publicacion.objects.filter(fecha_publicacion__lte=timezone.now()).order_by('fecha_publicacion')

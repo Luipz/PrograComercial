@@ -3,8 +3,8 @@
 
 {% block content %}
     <h2> Nueva Publicacion </h2>
-    <form method="publicacion" class="post-form">{% csrf_token %}
+    <form method="POST" class="post-form">{% csrf_token %}
         {{ formulario|bulma }}
         <button type="submit" class="sabe btn btn-default">Guardar</button>
     </form>
-{% endlock %}
+{% endblock %} 
