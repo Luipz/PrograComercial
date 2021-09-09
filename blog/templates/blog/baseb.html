@@ -4,28 +4,89 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Django Girls blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    </head>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=5VHwkFHQZHzhS_GthgE8vBKf5obwwhVotxSopTh-QKQsMS98ZPoIOXT-BD1HFOebxoFlnYxpve8sXsFAEvr6jkq1Bn1xs9_bRg7G4Hv7L5Y7MRM6U9wfcd4ti81nt6cTqe_AIhvNttNuym84-mnb--0mjg0498kfTTtx1DxuGSk" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://ff.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly92aXJ0dWFsLm1lc29hbWVyaWNhbmEuZWR1Lmd0L3BsdWdpbmZpbGUucGhwLzIwMzcxNi9tb2RfcmVzb3VyY2UvY29udGVudC8xL2Jhc2ViLmh0bWw_Zm9yY2Vkb3dubG9hZD0x"/></head>
     <body>
+        <section class="hero is-primary is-small">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+            <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                <a class="navbar-item">
+                    <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
+                </a>
+                <span class="navbar-burger" data-target="navbarMenuHeroA">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                </div>
+                <div id="navbarMenuHeroA" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="http://127.0.0.1:8000/">
+                    Home
+                    </a>
+                    <a class="navbar-item" href="{% url 'publicacion_nueva' %}">
+                    Ingresos
+                    </a>
+                    <a class="navbar-item" href="{% url 'publicacion_nueva' %}">
+                    Documentation
+                    </a>
+                    <span class="navbar-item">
+                    <a class="button is-primary is-inverted">
+                        <span class="icon">
+                        <i class="fab fa-github"></i>
+                        </span>
+                        <span>Download</span>
+                    </a>
+                    </span>
+                </div>
+                </div>
+            </div>
+            </nav>
+        </div>
 
-        <section class="hero is-small-with-navbar is-info">
-           <div class="hero-body">
-               <h1 class="title">
-                   Django Girls Blog
-               </h1>
-               <p class="subtitle">
-                   Mi blog con diseño en <strong>BULMA</strong>
-               </p>
-           </div>
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body">
+            <div class="container has-text-centered">
+            <p class="title">
+                Blog
+            </p>
+            <p class="subtitle">
+                Django Girls
+            </p>
+            </div>
+        </div>
+
+        <!-- Hero footer: will stick at the bottom -->
+        <div class="hero-foot">
+            <nav class="tabs">
+            <div class="container">
+                <ul>
+                <li class="is-active"><a>Overview</a></li>
+                <li><a>Modifiers</a></li>
+                <li><a>Grid</a></li>
+                <li><a>Elements</a></li>
+                <li><a>Components</a></li>
+                <li><a>Layout</a></li>
+                </ul>
+            </div>
+            </nav>
+        </div>
         </section>
-
+        
         <div class="content container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="column is-8">
                 {% block content %}
                 {% endblock %}
                 </div>
             </div>
-        </div>        
+        </div>
     </body>
-</html>
+</html> 
