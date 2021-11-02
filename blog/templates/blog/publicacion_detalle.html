@@ -1,13 +1,16 @@
 {% extends 'blog/baseb.html' %}
 
 {% block content %}
-    <div class="post">
+    <div class="box">
         {% if publicacion.fecha_pubicacion %}
-            <div class="date">
+            <div class="notification is-link is-light">
                 {{ publicacion.fecha_publicacion }}
             </div>
+        {% else %}
+            <a class="button is-primary" href="{% url 'publicacion_publicar' pk=publicacion.pk %}"><span class="fa fa-check"></span></a>
         {% endif %}
         <a class="button is-primary" href="{% url 'publicacion_editar' pk=publicacion.pk %}"><span class="fa fa-pencil"></span></a>
+        <a class="button is-primary" href="{% url 'publicacion_eliminar' pk=publicacion.pk %}"><span class="fa fa-eraser"></span></a>
         <h2>{{ publicacion.titulo }}</h2>
         <p>{{ publicacion.texto|linebreaksbr }}</p>
     </div>
