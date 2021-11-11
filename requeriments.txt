@@ -1,2 +1,2 @@
-django~=3.2.6
-django-bulma
+Django~=3.2.6
+Django-bulma
